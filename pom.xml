@@ -10,13 +10,6 @@
 	<properties>		
 		<maven-compiler-plugin.version>3.0</maven-compiler-plugin.version>
 	</properties>
-	<repositories>
-		<repository>
-			<id>my-repo1</id>
-			<name>your custom repo</name>
-			<url>https://mvnrepository.com</url>
-		</repository>
-  </repositories>
 	<dependencies>
 		<dependency>
 			<groupId>org.seleniumhq.selenium</groupId>
@@ -205,6 +198,15 @@
 		    <version>1.2.0</version>
 		</dependency>
 	</dependencies>
+	
+	<repositories>
+		<repository>
+			<id>my-repo1</id>
+			<name>your custom repo</name>
+			<url>https://mvnrepository.com</url>
+		</repository>
+  </repositories>
+  
 	<build>
 	<plugins>
 		<plugin>
