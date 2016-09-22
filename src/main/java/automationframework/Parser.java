@@ -37,11 +37,13 @@ public class Parser extends SetUrl {
 		 * For Chrome Driver
 		 */
 		String os = System.getProperty("os.name").toLowerCase();
-		if (os.indexOf("win") >= 0) {
+		System.out.println("Os is "+os);
+	/*	if (os.indexOf("win") >= 0) {
 			System.setProperty("webdriver.chrome.driver", "./src/main/resources/drivers/chromedriver.exe");
 		} else {
 			System.setProperty("webdriver.chrome.driver", "./src/main/resources/drivers/chromedriver");
-		}
+		}*/
+		System.setProperty("webdriver.chrome.driver", "./src/main/resources/drivers/chromedriver");
 		//System.setProperty("webdriver.ie.driver", "D:\\SAYANTAN\\Software bank\\Selenium Drivers\\IEDriverServer.exe");
 		WebDriver driver = new ChromeDriver();
 		final long startTime = System.currentTimeMillis();
