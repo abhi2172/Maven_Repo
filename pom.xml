@@ -9,6 +9,7 @@
 	
 	<properties>		
 		<maven-compiler-plugin.version>3.0</maven-compiler-plugin.version>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -199,13 +200,13 @@
 		</dependency>
 	</dependencies>
 	
-	<repositories>
+	<!--<repositories>
 		<repository>
 			<id>my-repo1</id>
 			<name>your custom repo</name>
 			<url>https://mvnrepository.com</url>
 		</repository>
-  </repositories>
+  </repositories>-->
   
 	<build>
 	<plugins>
