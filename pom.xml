@@ -6,6 +6,10 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<name>seleniumautomationPDH</name>
 	<description>seleniumautomationPDH</description>
+	
+	<properties>		
+		<maven-compiler-plugin.version>3.0</maven-compiler-plugin.version>
+	</properties>
 
 	<dependencies>
 		<dependency>
@@ -194,133 +198,98 @@
 		    <artifactId>sikuli-api</artifactId>
 		    <version>1.2.0</version>
 		</dependency>
-		<!--<dependency>
-			  <groupId>org.apache.maven.plugins</groupId>
-			  <artifactId>maven-compiler-plugin</artifactId>
-			  <version>3.5.1</version>
-			  <type>maven-plugin</type>
-			</dependency>-->
 	</dependencies>
-
 	<build>
-		<plugins>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-compiler-plugin</artifactId>
-				<version>3.1</version>
-				<configuration>
-					<source>1.7</source>
-					<target>1.7</target>
-				</configuration>
-			</plugin>
-			
-       		
-       		<plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.0</version>
-                <configuration>
-                    <source>${compiler.version}</source>
-                    <target>${compiler.version}</target>
-                </configuration>
-            </plugin>
-			<plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-source-plugin</artifactId>
-                <version>2.2.1</version>
-                <executions>
-                    <execution>
-                        <id>attach-sources</id>
-                        <goals>
-                            <goal>jar</goal>
-                        </goals>
-                    </execution>
-                </executions>
-            </plugin>
-			<plugin>
-					<groupId>org.apache.maven.plugins</groupId>
-					<artifactId>maven-surefire-plugin</artifactId>
-					<version>2.17</version>
-					<configuration>
-						<threadCount>10</threadCount>
-						<parallel>classes</parallel>
-						<reportsDirectory>target/testng-surefire-reports/</reportsDirectory>
-						<excludedGroups>cleanup</excludedGroups>
-						<forkCount>0</forkCount>
-					</configuration>
-				</plugin>
-			<!--<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-compiler-plugin</artifactId>
-				<configuration>
-					<source>1.8</source>
-					<target>1.8</target>
-					<debug>true</debug>
-					<debuglevel>lines,vars,source</debuglevel>
-				</configuration>
-			</plugin>-->
-			<!--<plugin> <groupId>org.codehaus.mojo</groupId> <artifactId>exec-maven-plugin</artifactId> 
-				<version>1.2.1</version> <executions> <execution> <phase>run</phase> <goals> 
-				<goal>java</goal> </goals> </execution> </executions> <configuration> <mainClass>automationframework.testclass</mainClass> 
-				</configuration> </plugin>
-			<plugin>
+	<plugins>
+		<plugin>
+			<artifactId>maven-compiler-plugin</artifactId>
+			<version>${maven-compiler-plugin.version}</version>
+		</plugin>
+		<plugin>
+			<groupId>org.apache.maven.plugins</groupId>
+			<artifactId>maven-compiler-plugin</artifactId>
+			<version>3.1</version>
+			<configuration>
+				<source>1.7</source>
+				<target>1.7</target>
+			</configuration>
+		</plugin>   		
+		<plugin>
+			<groupId>org.apache.maven.plugins</groupId>
+			<artifactId>maven-compiler-plugin</artifactId>
+			<version>3.0</version>
+			<configuration>
+				<source>${compiler.version}</source>
+				<target>${compiler.version}</target>
+			</configuration>
+		</plugin>
+		<plugin>
+			<groupId>org.apache.maven.plugins</groupId>
+			<artifactId>maven-source-plugin</artifactId>
+			<version>2.2.1</version>
+			<executions>
+				<execution>
+					<id>attach-sources</id>
+					<goals>
+						<goal>jar</goal>
+					</goals>
+				</execution>
+			</executions>
+		</plugin>
+		<plugin>
+			<groupId>org.apache.maven.plugins</groupId>
+			<artifactId>maven-surefire-plugin</artifactId>
+			<version>2.17</version>
+			<configuration>
+				<threadCount>10</threadCount>
+				<parallel>classes</parallel>
+				<reportsDirectory>target/testng-surefire-reports/</reportsDirectory>
+				<excludedGroups>cleanup</excludedGroups>
+				<forkCount>0</forkCount>
+			</configuration>
+		</plugin>
+		<plugin>
 			<groupId>org.codehaus.mojo</groupId>
 			<artifactId>exec-maven-plugin</artifactId>
-			<version>1.5</version>
+			<version>1.5.0</version>
 			<executions>
-			<execution>
-			<phase>run</phase>
-			<goals>
-			<goal>java</goal>
-			</goals>
-			</execution>
+				<execution>
+					<phase>run</phase>
+					<goals>
+						<goal>java</goal>
+					</goals>
+				</execution>
 			</executions>
 			<configuration>
-			<mainClass>automationframework.Parser</mainClass>
+				<mainClass>automationframework.Parser</mainClass>
 			</configuration>
-			</plugin>-->
-			<plugin>
-				<groupId>org.codehaus.mojo</groupId>
-				<artifactId>exec-maven-plugin</artifactId>
-				<version>1.5.0</version>
-				<executions>
-					<execution>
-						<phase>run</phase>
-						<goals>
-							<goal>java</goal>
-						</goals>
-					</execution>
-				</executions>
-				<configuration>
-					<mainClass>automationframework.Parser</mainClass>
-				</configuration>
-			</plugin>
-			<plugin>
-				<artifactId>maven-jar-plugin</artifactId>
-				<configuration>
-					<archive>
-						<manifest>
-							<addClasspath>true</addClasspath>
-							<classpathPrefix>lib/</classpathPrefix>
-							<mainClass>automationframework.Parser</mainClass>
-						</manifest>
-					</archive>
-				</configuration>
-			</plugin>
-			<plugin>
-				<artifactId>maven-assembly-plugin</artifactId>
-				<configuration>
-					<archive>
-						<manifest>
-							<mainClass>automationframework.Parser</mainClass>
-						</manifest>
-					</archive>
-					<descriptorRefs>
-						<descriptorRef>jar-with-dependencies</descriptorRef>
-					</descriptorRefs>
-				</configuration>
-			</plugin>
-		</plugins>
-
-	</build>
+		</plugin>
+		<plugin>	
+			<artifactId>maven-jar-plugin</artifactId>
+			<configuration>
+				<archive>
+					<manifest>
+						<addClasspath>true</addClasspath>
+						<classpathPrefix>lib/</classpathPrefix>
+						<mainClass>automationframework.Parser</mainClass>
+					</manifest>
+				</archive>
+			</configuration>
+		</plugin>
+		<plugin>
+			<artifactId>maven-assembly-plugin</artifactId>
+			<configuration>
+				<archive>
+					<manifest>
+						<mainClass>automationframework.Parser</mainClass>
+					</manifest>
+				</archive>
+				<descriptorRefs>
+					<descriptorRef>jar-with-dependencies</descriptorRef>
+				</descriptorRefs>
+			</configuration>
+		</plugin>
+	</plugins>
+</build>
+	
 </project>
