@@ -198,7 +198,13 @@
 
 	<build>
 		<plugins>
-			<plugin>
+			<dependency>
+  				<groupId>org.apache.maven.plugins</groupId>
+  				<artifactId>maven-compiler-plugin</artifactId>
+  				<version>3.5.1</version>
+  				<type>maven-plugin</type>
+			</dependency>
+			<!--<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
 				<configuration>
@@ -207,7 +213,7 @@
 					<debug>true</debug>
 					<debuglevel>lines,vars,source</debuglevel>
 				</configuration>
-			</plugin>
+			</plugin>-->
 			<!-- <plugin> <groupId>org.codehaus.mojo</groupId> <artifactId>exec-maven-plugin</artifactId> 
 				<version>1.2.1</version> <executions> <execution> <phase>run</phase> <goals> 
 				<goal>java</goal> </goals> </execution> </executions> <configuration> <mainClass>automationframework.testclass</mainClass> 
