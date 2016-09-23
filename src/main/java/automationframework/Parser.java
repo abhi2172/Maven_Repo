@@ -9,6 +9,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.remote.CapabilityType;
+import org.openqa.selenium.remote.DesiredCapabilities;
 
 public class Parser extends SetUrl {
 
@@ -45,7 +47,16 @@ public class Parser extends SetUrl {
 		}*/
 		System.setProperty("webdriver.chrome.driver", "./src/main/resources/drivers/chromedriver");
 		//System.setProperty("webdriver.ie.driver", "D:\\SAYANTAN\\Software bank\\Selenium Drivers\\IEDriverServer.exe");
-		WebDriver driver = new ChromeDriver();
+		String PROXY = "localhost:8080";
+
+		org.openqa.selenium.Proxy proxy = new org.openqa.selenium.Proxy();
+		proxy.setHttpProxy(PROXY)
+		     .setFtpProxy(PROXY)
+		     .setSslProxy(PROXY);
+		DesiredCapabilities cap = new DesiredCapabilities();
+		cap.setCapability(CapabilityType.PROXY, proxy);
+		
+		WebDriver driver = new ChromeDriver(cap);
 		final long startTime = System.currentTimeMillis();
 		/*
 		 * For IEDriver
