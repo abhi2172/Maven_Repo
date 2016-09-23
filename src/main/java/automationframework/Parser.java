@@ -45,18 +45,11 @@ public class Parser extends SetUrl {
 		} else {
 			System.setProperty("webdriver.chrome.driver", "./src/main/resources/drivers/chromedriver");
 		}*/
-		System.setProperty("webdriver.chrome.driver", "./src/main/resources/drivers/chromedriver");
+		//System.setProperty("webdriver.chrome.driver", "./src/main/resources/drivers/chromedriver");
 		//System.setProperty("webdriver.ie.driver", "D:\\SAYANTAN\\Software bank\\Selenium Drivers\\IEDriverServer.exe");
-		String PROXY = "localhost:8089";
-
-		org.openqa.selenium.Proxy proxy = new org.openqa.selenium.Proxy();
-		proxy.setHttpProxy(PROXY)
-		     .setFtpProxy(PROXY)
-		     .setSslProxy(PROXY);
-		DesiredCapabilities cap = new DesiredCapabilities();
-		cap.setCapability(CapabilityType.PROXY, proxy);
 		
-		WebDriver driver = new ChromeDriver(cap);
+		/*WebDriver driver = new ChromeDriver();*/
+		WebDriver driver = new FirefoxDriver();
 		final long startTime = System.currentTimeMillis();
 		/*
 		 * For IEDriver
