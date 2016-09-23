@@ -47,7 +47,7 @@ public class Parser extends SetUrl {
 		}*/
 		System.setProperty("webdriver.chrome.driver", "./src/main/resources/drivers/chromedriver");
 		//System.setProperty("webdriver.ie.driver", "D:\\SAYANTAN\\Software bank\\Selenium Drivers\\IEDriverServer.exe");
-		String PROXY = "localhost:8080";
+		String PROXY = "localhost:8089";
 
 		org.openqa.selenium.Proxy proxy = new org.openqa.selenium.Proxy();
 		proxy.setHttpProxy(PROXY)
