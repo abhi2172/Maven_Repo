@@ -49,7 +49,8 @@ public class Parser extends SetUrl {
 		//System.setProperty("webdriver.ie.driver", "D:\\SAYANTAN\\Software bank\\Selenium Drivers\\IEDriverServer.exe");
 		
 		/*WebDriver driver = new ChromeDriver();*/
-		WebDriver driver = new FirefoxDriver();
+		DesiredCapabilities dc=DesiredCapabilities.firefox();
+		WebDriver driver = new FirefoxDriver(dc);
 		final long startTime = System.currentTimeMillis();
 		/*
 		 * For IEDriver
