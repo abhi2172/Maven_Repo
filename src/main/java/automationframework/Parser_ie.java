@@ -39,7 +39,7 @@ public class Parser extends SetUrl {
 		String os = System.getProperty("os.name").toLowerCase();
 		System.out.println("Os is "+os+"running in IE Driver.");	
 		System.setProperty("webdriver.ie.driver", "D:\\SAYANTAN\\Software bank\\Selenium Drivers\\IEDriverServer");
-    WebDriver driver = new IEDriver();
+    		WebDriver driver =new InternetExplorerDriver();
 		final long startTime = System.currentTimeMillis();
 		/*
 		 * For IEDriver
