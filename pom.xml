@@ -210,12 +210,7 @@
     <artifactId>selenium-remote-driver</artifactId>
     <version>3.0.0-beta3</version>
 </dependency>
-<!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-firefox-driver -->
-<dependency>
-    <groupId>org.seleniumhq.selenium</groupId>
-    <artifactId>selenium-firefox-driver</artifactId>
-    <version>3.0.0-beta3</version>
-</dependency>
+
 <dependency>
         <groupId>org.seleniumhq.selenium</groupId>
         <artifactId>selenium-server</artifactId>
