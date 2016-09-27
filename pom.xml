@@ -280,6 +280,7 @@
 			</executions>
 			<configuration>
 				<mainClass>automationframework.Parser</mainClass>
+				<mainClass>automationframework.Parser_ff</mainClass>
 			</configuration>
 		</plugin>
 		<plugin>	
