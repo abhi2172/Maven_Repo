@@ -291,6 +291,7 @@
 						<addClasspath>true</addClasspath>
 						<classpathPrefix>lib/</classpathPrefix>
 						<mainClass>automationframework.Parser</mainClass>
+						<mainClass>automationframework.Parser_ff</mainClass>
 					</manifest>
 				</archive>
 			</configuration>
@@ -302,6 +303,7 @@
 				<archive>
 					<manifest>
 						<mainClass>automationframework.Parser</mainClass>
+						<mainClass>automationframework.Parser_ff</mainClass>
 					</manifest>
 				</archive>
 				<descriptorRefs>
