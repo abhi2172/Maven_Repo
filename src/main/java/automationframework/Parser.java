@@ -41,17 +41,8 @@ public class Parser extends SetUrl {
 		 */
 		String os = System.getProperty("os.name").toLowerCase();
 		System.out.println("Os is "+os+"running in Google Chrome.");
-	/*	if (os.indexOf("win") >= 0) {
-			System.setProperty("webdriver.chrome.driver", "./src/main/resources/drivers/chromedriver.exe");
-		} else {
-			System.setProperty("webdriver.chrome.driver", "./src/main/resources/drivers/chromedriver");
-		}*/
 		System.setProperty("webdriver.chrome.driver", "./src/main/resources/drivers/chromedriver");
-		//System.setProperty("webdriver.ie.driver", "D:\\SAYANTAN\\Software bank\\Selenium Drivers\\IEDriverServer.exe");
-		
 		WebDriver driver = new ChromeDriver();
-		DesiredCapabilities dc=DesiredCapabilities.firefox();
-		WebDriver driver = new FirefoxDriver(dc);
 		final long startTime = System.currentTimeMillis();
 		/*
 		 * For IEDriver
