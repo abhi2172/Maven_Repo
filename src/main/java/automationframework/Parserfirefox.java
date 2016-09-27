@@ -12,7 +12,7 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.ui.Select;
 
 
-public class Parser_ff extends SetUrl {
+public class Parserfirefox extends SetUrl {
 
 	public static void sleep() {
 		try {
