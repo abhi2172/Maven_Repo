@@ -41,10 +41,10 @@ public class Parser extends SetUrl {
 		 */
 		String os = System.getProperty("os.name").toLowerCase();
 		System.out.println("Os is "+os+"running in FF.");
-		DesiredCapabilities dc=DesiredCapabilities.firefox();
-		WebDriver driver = new FirefoxDriver(dc);
-		//System.setProperty("webdriver.chrome.driver", "./src/main/resources/drivers/chromedriver");
-		//WebDriver driver = new ChromeDriver();
+		
+		
+		System.setProperty("webdriver.chrome.driver", "./src/main/resources/drivers/chromedriver");
+		WebDriver driver = new ChromeDriver();
 		final long startTime = System.currentTimeMillis();
 		/*
 		 * For IEDriver
