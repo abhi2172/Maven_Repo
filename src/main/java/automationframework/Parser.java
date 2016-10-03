@@ -40,12 +40,13 @@ public class Parser extends SetUrl {
 		 * For Chrome Driver
 		 */
 		String os = System.getProperty("os.name").toLowerCase();
-		System.out.println("Os is "+os+"running in FF.");
+		System.out.println("Os is "+os+"running in Chrome.");
 		
 		
 		System.setProperty("webdriver.chrome.driver", "./src/main/resources/drivers/chromedriver");
 		WebDriver driver = new ChromeDriver();
 		final long startTime = System.currentTimeMillis();
+		System.setProperty("webdriver.chrome.logfile", "/local/apps/jenkins4/jobs/DemoSeleniumPDH/logs/chrome.log");
 		/*
 		 * For IEDriver
 		 */
